@@ -1,20 +1,22 @@
+# Problem: Implement a 3 stack 
+# Algorithm for n-stacks using dynamic arrays (list)
+#   Stack: LIFO (Last In First Out)
+#   pop from top and push to top
+#   data = our dynamic array
+#   Maintain tops array for n-number of stacks and initialize to -1
+#   Maintain lengths for each stack.
+# Push(stack, value)
+#   Check if stack is empty if yes append to data and tops=len(data)-1
+#   Increment lengths by 1
+#   Insert at top
+#   Increment tops for all stacks which are next in sequence
+# Pop(stack)
+#   Check if stack is empty if yes return -999
+#   Decrement length by 1
+#   Delete at top
+#   Increment tops for all stacks which are next in sequence
+
 class NStack:
-    # Algorithm for n-stacks using dynamic arrays (list)
-    #   Stack: LIFO (Last In First Out)
-    #   pop from top and push to top
-    #   data = our dynamic array
-    #   Maintain tops array for n-number of stacks and initialize to -1
-    #   Maintain lengths for each stack.
-    # Push(stack, value)
-    #   Check if stack is empty if yes append to data and tops=len(data)-1
-    #   Increment lengths by 1
-    #   Insert at top
-    #   Increment tops for all stacks which are next in sequence
-    # Pop(stack)
-    #   Check if stack is empty if yes return -999
-    #   Decrement length by 1
-    #   Delete at top
-    #   Increment tops for all stacks which are next in sequence
     def __init__(self, n=3):
         self.data = []
         self.tops = []
